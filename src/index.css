@@ -1,13 +1,149 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+:root {
+    --text-colour: #000;
+    --background-colour: rgb(235, 175, 171);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+    background-color: var(--background-colour);
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
 }
+
+.footer {
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    font-size: 64px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    width: 100vw;
+    white-space: nowrap;
+    color: var(--text-colour);
+}
+
+.footer-title {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.start-date {
+    padding: 20px 40px;
+}
+
+.end-date {
+    padding: 20px 60px;
+    text-align: right;
+}
+
+.footer-title:after {
+    display: block;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: var(--text-colour);
+    left: 20px;
+    right: 20px;
+    top: 50%;
+
+}
+
+.header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 30px;
+}
+
+.header-logo {
+    fill: var(--text-colour);
+}
+
+.colour-changer-container {
+    color: black;
+    display: inline-flex;
+    box-shadow: 1px 1px 20px;
+    position: fixed;
+    right: -225px;
+    top: 180px;
+    align-items: center;
+    transition: right 0.3s linear;
+}
+
+.tab-arrow {
+    fill: var(--text-colour);
+}
+
+.colour-pickers {
+    color: var(--text-colour);
+    display: flex;
+    padding: 5px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+}
+
+.change-background {
+    display: flex;
+}
+
+.change-text {
+    display: flex;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.colour-input {
+    border-radius: 100%;
+    width: 20px;
+    height: 25px;
+    margin: 5px;
+}
+
+.colour-input::-webkit-color-swatch {
+    border-radius: 100%;
+}
+
+
+.collapser {
+    fill: var(--text-colour);
+    padding: 10px 20px;
+    transition: transform 0.3s linear;
+}
+
+.collapser:hover {
+    cursor: pointer;
+}
+
+.picker-colour {
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.title-image {
+    max-height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    display: flex;
+    width: 400px;
+    position: relative;
+}
+
+.image-piece {
+    background-image:url("./images/image1.jpeg");
+    background-size: 400px 600px;
+    width:100px;
+    height:100px;
+    position: absolute;
+}
+
